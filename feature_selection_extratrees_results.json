@@ -1,0 +1,1911 @@
+{
+  "n_rows": 268887,
+  "n_numeric_features": 77,
+  "attack_counts": {
+    "udp_flood": 88699,
+    "ad_syn": 62188,
+    "syn_flood": 45186,
+    "normal": 44201,
+    "icmp_flood": 16028,
+    "ad_udp": 10618,
+    "ad_slow": 1967
+  },
+  "attacks": [
+    "udp_flood",
+    "ad_syn",
+    "syn_flood",
+    "icmp_flood",
+    "ad_udp",
+    "ad_slow"
+  ],
+  "method": "ExtraTreesClassifier n_estimators=100 Gini OvR vs normal",
+  "per_attack": {
+    "udp_flood": {
+      "n_rows": 132900,
+      "n_attack": 88699,
+      "n_benign": 44201,
+      "fit_seconds": 8.89,
+      "n_features_90": 28,
+      "features_90": [
+        {
+          "feature": "protocol",
+          "importance": 0.129092,
+          "cum_importance": 0.129092,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.093549,
+          "cum_importance": 0.222641,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.050753,
+          "cum_importance": 0.273394,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.045546,
+          "cum_importance": 0.31894,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.045011,
+          "cum_importance": 0.363951,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.043342,
+          "cum_importance": 0.407293,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.042552,
+          "cum_importance": 0.449846,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.035453,
+          "cum_importance": 0.485298,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.031867,
+          "cum_importance": 0.517166,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.03103,
+          "cum_importance": 0.548196,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.028162,
+          "cum_importance": 0.576358,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.025741,
+          "cum_importance": 0.602099,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.025554,
+          "cum_importance": 0.627653,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.025073,
+          "cum_importance": 0.652726,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.024758,
+          "cum_importance": 0.677484,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.024654,
+          "cum_importance": 0.702138,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_size_avg",
+          "importance": 0.022279,
+          "cum_importance": 0.724417,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.020393,
+          "cum_importance": 0.74481,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.020372,
+          "cum_importance": 0.765182,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.020102,
+          "cum_importance": 0.785284,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_std",
+          "importance": 0.019338,
+          "cum_importance": 0.804622,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.018403,
+          "cum_importance": 0.823025,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_max",
+          "importance": 0.017751,
+          "cum_importance": 0.840776,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "subflow_fwd_byts",
+          "importance": 0.015386,
+          "cum_importance": 0.856162,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "totlen_fwd_pkts",
+          "importance": 0.015273,
+          "cum_importance": 0.871434,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "init_bwd_win_byts",
+          "importance": 0.01331,
+          "cum_importance": 0.884744,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.012937,
+          "cum_importance": 0.897681,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_act_data_pkts",
+          "importance": 0.012338,
+          "cum_importance": 0.910019,
+          "extractability": "openflow_approx"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "protocol",
+          "importance": 0.12909171076911882,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.09354906668415484,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.050752914566099226,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.045546468325959676,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.04501095009753033,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.043342159736891754,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.04255228823489406,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.035452915290044934,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.0318673440941158,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.031029974494282693,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.028161760708597806,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.02574107829654377,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.0255544371511252,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.025072965997275654,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.0247579809898882,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.024654032476356228,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_size_avg",
+          "importance": 0.02227891768437122,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.020393011138601067,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.020372247222155183,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.020102222375683303,
+          "extractability": "not_extractable"
+        }
+      ]
+    },
+    "ad_syn": {
+      "n_rows": 106389,
+      "n_attack": 62188,
+      "n_benign": 44201,
+      "fit_seconds": 5.1,
+      "n_features_90": 32,
+      "features_90": [
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.100226,
+          "cum_importance": 0.100226,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.079901,
+          "cum_importance": 0.180127,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "protocol",
+          "importance": 0.06753,
+          "cum_importance": 0.247657,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.065873,
+          "cum_importance": 0.31353,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.0468,
+          "cum_importance": 0.36033,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.035759,
+          "cum_importance": 0.396089,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.035118,
+          "cum_importance": 0.431207,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.033495,
+          "cum_importance": 0.464703,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.033292,
+          "cum_importance": 0.497995,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.031134,
+          "cum_importance": 0.529128,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.027881,
+          "cum_importance": 0.557009,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.025994,
+          "cum_importance": 0.583003,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.025714,
+          "cum_importance": 0.608717,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.025219,
+          "cum_importance": 0.633936,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_size_avg",
+          "importance": 0.024165,
+          "cum_importance": 0.658101,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_max",
+          "importance": 0.021573,
+          "cum_importance": 0.679674,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.020921,
+          "cum_importance": 0.700595,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.020873,
+          "cum_importance": 0.721469,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.019124,
+          "cum_importance": 0.740592,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.017493,
+          "cum_importance": 0.758085,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.016521,
+          "cum_importance": 0.774607,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_iat_tot",
+          "importance": 0.014447,
+          "cum_importance": 0.789054,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_act_data_pkts",
+          "importance": 0.014105,
+          "cum_importance": 0.803159,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_header_len",
+          "importance": 0.013843,
+          "cum_importance": 0.817002,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_urg_flags",
+          "importance": 0.013121,
+          "cum_importance": 0.830123,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "psh_flag_cnt",
+          "importance": 0.011998,
+          "cum_importance": 0.842121,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_std",
+          "importance": 0.01198,
+          "cum_importance": 0.854101,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.010933,
+          "cum_importance": 0.865034,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_duration",
+          "importance": 0.010696,
+          "cum_importance": 0.87573,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "totlen_fwd_pkts",
+          "importance": 0.010683,
+          "cum_importance": 0.886413,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "subflow_fwd_byts",
+          "importance": 0.009087,
+          "cum_importance": 0.8955,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.008599,
+          "cum_importance": 0.904099,
+          "extractability": "openflow_approx"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.10022573942930578,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.07990133500387246,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "protocol",
+          "importance": 0.06753004952856782,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.06587322968405329,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.046799760591884634,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.035759027914905386,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.03511815792039054,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.03349545868801148,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.03329188069165569,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.031133523930410835,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.027880768052959776,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.025994118230092858,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.025714354235663667,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.025218994483606955,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_size_avg",
+          "importance": 0.024164558989529718,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_max",
+          "importance": 0.021573088422346936,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.02092123029917469,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.020873290270923956,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.019123867582777253,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.01749303996984435,
+          "extractability": "openflow_approx"
+        }
+      ]
+    },
+    "syn_flood": {
+      "n_rows": 89387,
+      "n_attack": 45186,
+      "n_benign": 44201,
+      "fit_seconds": 3.7,
+      "n_features_90": 32,
+      "features_90": [
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.136564,
+          "cum_importance": 0.136564,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.082348,
+          "cum_importance": 0.218912,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.069216,
+          "cum_importance": 0.288129,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.056069,
+          "cum_importance": 0.344198,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.047305,
+          "cum_importance": 0.391503,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.043005,
+          "cum_importance": 0.434508,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.030104,
+          "cum_importance": 0.464612,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.028853,
+          "cum_importance": 0.493465,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.028626,
+          "cum_importance": 0.522091,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_std",
+          "importance": 0.02756,
+          "cum_importance": 0.549651,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.025381,
+          "cum_importance": 0.575031,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.024316,
+          "cum_importance": 0.599347,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_act_data_pkts",
+          "importance": 0.022299,
+          "cum_importance": 0.621646,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.021874,
+          "cum_importance": 0.64352,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "protocol",
+          "importance": 0.02163,
+          "cum_importance": 0.66515,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ack_flag_cnt",
+          "importance": 0.021445,
+          "cum_importance": 0.686595,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.020808,
+          "cum_importance": 0.707403,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.020123,
+          "cum_importance": 0.727526,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "tot_bwd_pkts",
+          "importance": 0.02007,
+          "cum_importance": 0.747596,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.017471,
+          "cum_importance": 0.765068,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_var",
+          "importance": 0.016204,
+          "cum_importance": 0.781272,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_iat_tot",
+          "importance": 0.015564,
+          "cum_importance": 0.796836,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.015329,
+          "cum_importance": 0.812165,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.012694,
+          "cum_importance": 0.824859,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_header_len",
+          "importance": 0.012098,
+          "cum_importance": 0.836957,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.011052,
+          "cum_importance": 0.84801,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_urg_flags",
+          "importance": 0.010926,
+          "cum_importance": 0.858936,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.010902,
+          "cum_importance": 0.869838,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.010454,
+          "cum_importance": 0.880292,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_header_len",
+          "importance": 0.009768,
+          "cum_importance": 0.89006,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.009765,
+          "cum_importance": 0.899825,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "subflow_bwd_pkts",
+          "importance": 0.008849,
+          "cum_importance": 0.908674,
+          "extractability": "openflow_direct"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.13656436297876037,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.08234786912148176,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.069216454852717,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.056069487597953944,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.04730478448899472,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.04300482487114747,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.030104153420906145,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.02885303313162278,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.02862600615480751,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_std",
+          "importance": 0.027559654835884788,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.02538050404453914,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.024315585193927795,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_act_data_pkts",
+          "importance": 0.022299370072136004,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "flow_byts_s",
+          "importance": 0.021873808784707523,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "protocol",
+          "importance": 0.021630420693261182,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ack_flag_cnt",
+          "importance": 0.02144464285481786,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.020807566093032578,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.0201233339099917,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "tot_bwd_pkts",
+          "importance": 0.0200702675043803,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.017471415853688912,
+          "extractability": "openflow_approx"
+        }
+      ]
+    },
+    "icmp_flood": {
+      "n_rows": 60229,
+      "n_attack": 16028,
+      "n_benign": 44201,
+      "fit_seconds": 2.98,
+      "n_features_90": 27,
+      "features_90": [
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.087472,
+          "cum_importance": 0.087472,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.070855,
+          "cum_importance": 0.158326,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.065451,
+          "cum_importance": 0.223778,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.062447,
+          "cum_importance": 0.286225,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.058775,
+          "cum_importance": 0.345,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.058305,
+          "cum_importance": 0.403304,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.049061,
+          "cum_importance": 0.452365,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.048946,
+          "cum_importance": 0.501311,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_seg_size_avg",
+          "importance": 0.047647,
+          "cum_importance": 0.548958,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_urg_flags",
+          "importance": 0.039719,
+          "cum_importance": 0.588676,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.036025,
+          "cum_importance": 0.624702,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.034402,
+          "cum_importance": 0.659104,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_byts_b_avg",
+          "importance": 0.031257,
+          "cum_importance": 0.690361,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkts_b_avg",
+          "importance": 0.027713,
+          "cum_importance": 0.718074,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.025268,
+          "cum_importance": 0.743342,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.017186,
+          "cum_importance": 0.760528,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.015962,
+          "cum_importance": 0.77649,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.015123,
+          "cum_importance": 0.791613,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.0149,
+          "cum_importance": 0.806513,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.013956,
+          "cum_importance": 0.82047,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "subflow_bwd_byts",
+          "importance": 0.013953,
+          "cum_importance": 0.834422,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.013827,
+          "cum_importance": 0.84825,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "protocol",
+          "importance": 0.013247,
+          "cum_importance": 0.861497,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.011954,
+          "cum_importance": 0.873451,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_size_avg",
+          "importance": 0.011402,
+          "cum_importance": 0.884853,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.010263,
+          "cum_importance": 0.895116,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "tot_bwd_pkts",
+          "importance": 0.00869,
+          "cum_importance": 0.903806,
+          "extractability": "openflow_direct"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.08747166823782139,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "ece_flag_cnt",
+          "importance": 0.07085471423782738,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.0654512932368266,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "cwr_flag_count",
+          "importance": 0.06244685693308284,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.05877505633822008,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "urg_flag_cnt",
+          "importance": 0.05830476300855914,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.049060800714132144,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.048946102794481916,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_seg_size_avg",
+          "importance": 0.04764669819245472,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_urg_flags",
+          "importance": 0.039718514636834824,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.03602504600703056,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.03440219611683105,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_byts_b_avg",
+          "importance": 0.031257289457725865,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkts_b_avg",
+          "importance": 0.027712794272787056,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.0252681119916525,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.017185846030750164,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.015962304462111828,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.01512299988663253,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.014900276601784444,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_seg_size_avg",
+          "importance": 0.013956241016152419,
+          "extractability": "openflow_direct"
+        }
+      ]
+    },
+    "ad_udp": {
+      "n_rows": 54819,
+      "n_attack": 10618,
+      "n_benign": 44201,
+      "fit_seconds": 2.37,
+      "n_features_90": 33,
+      "features_90": [
+        {
+          "feature": "init_bwd_win_byts",
+          "importance": 0.183316,
+          "cum_importance": 0.183316,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.111065,
+          "cum_importance": 0.294381,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.082606,
+          "cum_importance": 0.376988,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.064148,
+          "cum_importance": 0.441135,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_byts_b_avg",
+          "importance": 0.046797,
+          "cum_importance": 0.487932,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.040437,
+          "cum_importance": 0.528369,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.038208,
+          "cum_importance": 0.566578,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.027771,
+          "cum_importance": 0.594349,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.024533,
+          "cum_importance": 0.618882,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_std",
+          "importance": 0.019593,
+          "cum_importance": 0.638475,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkt_len_max",
+          "importance": 0.019411,
+          "cum_importance": 0.657887,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.018499,
+          "cum_importance": 0.676386,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.016505,
+          "cum_importance": 0.69289,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.016197,
+          "cum_importance": 0.709088,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.015471,
+          "cum_importance": 0.724559,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_byts_b_avg",
+          "importance": 0.01408,
+          "cum_importance": 0.738638,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.013391,
+          "cum_importance": 0.752029,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.0133,
+          "cum_importance": 0.765329,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.012036,
+          "cum_importance": 0.777366,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.011431,
+          "cum_importance": 0.788796,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.011296,
+          "cum_importance": 0.800093,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "psh_flag_cnt",
+          "importance": 0.01121,
+          "cum_importance": 0.811303,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "ack_flag_cnt",
+          "importance": 0.010686,
+          "cum_importance": 0.821989,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_mean",
+          "importance": 0.009041,
+          "cum_importance": 0.83103,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_iat_mean",
+          "importance": 0.008894,
+          "cum_importance": 0.839923,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_header_len",
+          "importance": 0.0085,
+          "cum_importance": 0.848423,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "flow_iat_mean",
+          "importance": 0.008116,
+          "cum_importance": 0.856539,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_iat_std",
+          "importance": 0.0079,
+          "cum_importance": 0.864439,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.007837,
+          "cum_importance": 0.872276,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_urg_flags",
+          "importance": 0.007632,
+          "cum_importance": 0.879908,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_seg_size_avg",
+          "importance": 0.007503,
+          "cum_importance": 0.887411,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "pkt_len_max",
+          "importance": 0.007159,
+          "cum_importance": 0.89457,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_b_avg",
+          "importance": 0.006879,
+          "cum_importance": 0.901449,
+          "extractability": "not_extractable"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "init_bwd_win_byts",
+          "importance": 0.18331590206345605,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.11106535535793594,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.0826062781988666,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.06414779533225828,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_byts_b_avg",
+          "importance": 0.0467967703164495,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.04043704608447154,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.03820841787930585,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.027771443847670548,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.02453298922436993,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_std",
+          "importance": 0.019593081510687397,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkt_len_max",
+          "importance": 0.019411482867801748,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.018498994247798353,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.016504830115927287,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_std",
+          "importance": 0.01619738372283272,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.015470896706696415,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_byts_b_avg",
+          "importance": 0.014079753693656018,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.013390585998366752,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.013300254626576809,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_pkt_len_max",
+          "importance": 0.01203639779753002,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.011430550128065934,
+          "extractability": "openflow_direct"
+        }
+      ]
+    },
+    "ad_slow": {
+      "n_rows": 46168,
+      "n_attack": 1967,
+      "n_benign": 44201,
+      "fit_seconds": 2.28,
+      "n_features_90": 26,
+      "features_90": [
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.180376,
+          "cum_importance": 0.180376,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "init_bwd_win_byts",
+          "importance": 0.155466,
+          "cum_importance": 0.335842,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.104564,
+          "cum_importance": 0.440406,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.089619,
+          "cum_importance": 0.530025,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.059999,
+          "cum_importance": 0.590025,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.032476,
+          "cum_importance": 0.6225,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.02959,
+          "cum_importance": 0.65209,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.023965,
+          "cum_importance": 0.676055,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_b_avg",
+          "importance": 0.020945,
+          "cum_importance": 0.697,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.019477,
+          "cum_importance": 0.716476,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_seg_size_avg",
+          "importance": 0.019241,
+          "cum_importance": 0.735717,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_pkt_len_max",
+          "importance": 0.018116,
+          "cum_importance": 0.753833,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.017221,
+          "cum_importance": 0.771054,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.012972,
+          "cum_importance": 0.784026,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.012017,
+          "cum_importance": 0.796043,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.011626,
+          "cum_importance": 0.807669,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.011051,
+          "cum_importance": 0.81872,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.010347,
+          "cum_importance": 0.829068,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.010327,
+          "cum_importance": 0.839395,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "subflow_fwd_pkts",
+          "importance": 0.009526,
+          "cum_importance": 0.848921,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "psh_flag_cnt",
+          "importance": 0.009473,
+          "cum_importance": 0.858394,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_std",
+          "importance": 0.009284,
+          "cum_importance": 0.867678,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_iat_max",
+          "importance": 0.009215,
+          "cum_importance": 0.876893,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "bwd_byts_b_avg",
+          "importance": 0.009114,
+          "cum_importance": 0.886007,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "ack_flag_cnt",
+          "importance": 0.008787,
+          "cum_importance": 0.894794,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkts_s",
+          "importance": 0.007872,
+          "cum_importance": 0.902666,
+          "extractability": "openflow_direct"
+        }
+      ],
+      "ranking_top20": [
+        {
+          "feature": "bwd_blk_rate_avg",
+          "importance": 0.1803757848869739,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "init_bwd_win_byts",
+          "importance": 0.15546642094540009,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "fin_flag_cnt",
+          "importance": 0.10456427693948435,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "init_fwd_win_byts",
+          "importance": 0.08961886885584057,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "pkt_len_min",
+          "importance": 0.05999935146403575,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_min",
+          "importance": 0.03247560184698007,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkt_len_mean",
+          "importance": 0.0295896039442152,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "fwd_psh_flags",
+          "importance": 0.023964873117484256,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_b_avg",
+          "importance": 0.020944877084301552,
+          "extractability": "not_extractable"
+        },
+        {
+          "feature": "totlen_bwd_pkts",
+          "importance": 0.019476707436151,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_seg_size_avg",
+          "importance": 0.019241080344894763,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_pkt_len_max",
+          "importance": 0.018115679793917438,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "down_up_ratio",
+          "importance": 0.017220557210576293,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "syn_flag_cnt",
+          "importance": 0.012972376286717562,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "rst_flag_cnt",
+          "importance": 0.012016909301035989,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "fwd_pkt_len_mean",
+          "importance": 0.011626217211703722,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "flow_pkts_s",
+          "importance": 0.011051262727562296,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "bwd_pkt_len_min",
+          "importance": 0.01034718920119212,
+          "extractability": "openflow_approx"
+        },
+        {
+          "feature": "bwd_pkts_s",
+          "importance": 0.010327438889935139,
+          "extractability": "openflow_direct"
+        },
+        {
+          "feature": "subflow_fwd_pkts",
+          "importance": 0.009525863280113699,
+          "extractability": "openflow_direct"
+        }
+      ]
+    }
+  },
+  "common10": [
+    {
+      "feature": "down_up_ratio",
+      "mean_importance": 0.049101,
+      "n_attacks_in_90": 6,
+      "in_all_attacks": true,
+      "extractability": "openflow_direct",
+      "per_attack": {
+        "udp_flood": 0.093549,
+        "ad_syn": 0.035759,
+        "syn_flood": 0.047305,
+        "icmp_flood": 0.087472,
+        "ad_udp": 0.0133,
+        "ad_slow": 0.017221
+      }
+    },
+    {
+      "feature": "flow_pkts_s",
+      "mean_importance": 0.043963,
+      "n_attacks_in_90": 6,
+      "in_all_attacks": true,
+      "extractability": "openflow_direct",
+      "per_attack": {
+        "udp_flood": 0.050753,
+        "ad_syn": 0.079901,
+        "syn_flood": 0.082348,
+        "icmp_flood": 0.011954,
+        "ad_udp": 0.027771,
+        "ad_slow": 0.011051
+      }
+    },
+    {
+      "feature": "rst_flag_cnt",
+      "mean_importance": 0.038413,
+      "n_attacks_in_90": 6,
+      "in_all_attacks": true,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.045011,
+        "ad_syn": 0.065873,
+        "syn_flood": 0.069216,
+        "icmp_flood": 0.013827,
+        "ad_udp": 0.024533,
+        "ad_slow": 0.012017
+      }
+    },
+    {
+      "feature": "pkt_len_min",
+      "mean_importance": 0.028769,
+      "n_attacks_in_90": 6,
+      "in_all_attacks": true,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.025554,
+        "ad_syn": 0.008599,
+        "syn_flood": 0.010902,
+        "icmp_flood": 0.049061,
+        "ad_udp": 0.018499,
+        "ad_slow": 0.059999
+      }
+    },
+    {
+      "feature": "bwd_pkts_s",
+      "mean_importance": 0.050038,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_direct",
+      "per_attack": {
+        "udp_flood": 0.0,
+        "ad_syn": 0.100226,
+        "syn_flood": 0.136564,
+        "icmp_flood": 0.0149,
+        "ad_udp": 0.038208,
+        "ad_slow": 0.010327
+      }
+    },
+    {
+      "feature": "fwd_pkts_s",
+      "mean_importance": 0.025103,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_direct",
+      "per_attack": {
+        "udp_flood": 0.045546,
+        "ad_syn": 0.033292,
+        "syn_flood": 0.056069,
+        "icmp_flood": 0.0,
+        "ad_udp": 0.007837,
+        "ad_slow": 0.007872
+      }
+    },
+    {
+      "feature": "bwd_pkt_len_min",
+      "mean_importance": 0.022962,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.035453,
+        "ad_syn": 0.0,
+        "syn_flood": 0.011052,
+        "icmp_flood": 0.065451,
+        "ad_udp": 0.015471,
+        "ad_slow": 0.010347
+      }
+    },
+    {
+      "feature": "fwd_pkt_len_max",
+      "mean_importance": 0.022655,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.031867,
+        "ad_syn": 0.0468,
+        "syn_flood": 0.030104,
+        "icmp_flood": 0.015123,
+        "ad_udp": 0.012036,
+        "ad_slow": 0.0
+      }
+    },
+    {
+      "feature": "syn_flag_cnt",
+      "mean_importance": 0.020364,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.042552,
+        "ad_syn": 0.0,
+        "syn_flood": 0.043005,
+        "icmp_flood": 0.010263,
+        "ad_udp": 0.013391,
+        "ad_slow": 0.012972
+      }
+    },
+    {
+      "feature": "fwd_psh_flags",
+      "mean_importance": 0.0172,
+      "n_attacks_in_90": 5,
+      "in_all_attacks": false,
+      "extractability": "openflow_approx",
+      "per_attack": {
+        "udp_flood": 0.018403,
+        "ad_syn": 0.025219,
+        "syn_flood": 0.024316,
+        "icmp_flood": 0.0,
+        "ad_udp": 0.011296,
+        "ad_slow": 0.023965
+      }
+    }
+  ],
+  "elapsed_seconds": 40.2
+}
